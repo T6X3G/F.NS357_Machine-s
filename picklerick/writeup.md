@@ -50,6 +50,17 @@ I need you to *BURRRP*....Morty, logon to my computer and find the last three se
 /home/rick
 
 
+![image](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/1984df96-1354-4c84-a286-4abeebc71e01)
+
+![image](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/dc21d5c6-3739-4f1e-a76a-ef4f875baf87)
+
+![image](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/07da36c9-49af-4f7c-9dbb-0bc0576327d1)
+
+![image](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/fade4790-c667-46bc-b3ea-11d066d8b88d)
+
+
+![image](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/1ae5af4a-a578-490b-91f7-62c7e41430a5)
+
 
 
 
