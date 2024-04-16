@@ -1,4 +1,4 @@
-![image](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/ebc09a79-2121-47f8-8fe1-86b3e4d6b3c0)# Tabby
+# Tabby
 ![image](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/f444685b-a173-45a1-abc1-995299225d84)
 $sudo nmap -sC -sV 10.10.10.194
 
