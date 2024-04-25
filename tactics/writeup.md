@@ -1,7 +1,6 @@
 # Tactics
 Enumeration
 
-I fired up an Nmap scan to get a general view of the target host. Rustscan is another alternative. Syntax: nmap -sC -Pn -v -p- — min-rate=10000 {Target_IP}
 
 ```
 ┌──(melle㉿tuguldur)-[~/Downloads]
@@ -30,7 +29,6 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 77.73 seconds
 ```
 
-After a couple of failed attempts to list the shares without the -U flag, I proceeded to authenticate as the ‘Administrator’ user in order to attempt a passwordless login, which resulted in the shares being listed. Then pressed Enter when prompted for a password to successfully gain access. Syntax: smbclient -L {Target_IP} -U Administrator.
 
 ![image](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/8985ba37-521e-47ca-b68d-8b91e594ceab)
 
@@ -57,15 +55,12 @@ smb: \> dir
 ###### Foothold
 
 
-` I was able to access and navigate through all three shares as the ‘Administrator’ user, and only the C$ share which is the file system of a Windows machine had interesting directories/files in it. Inside it, I found the Users directory with the Administrator directory and after enumerating through it, the flag.txt file was present in the Desktop directory (C:\Users\Administrator\Desktop). Syntax: smbclient \\\\{Target_IP} -U Administrator`
 ![image](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/c953b48c-8f4d-41b3-9fa5-6236ee981c20)
 
 ![image](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/4b321c97-8ffb-4d48-9be3-91441c266635)
 
 ![image](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/70d28431-f319-4b49-acc0-99183a459423)
-Since access to the ADMIN$ share is allowed on the SMB server, using Impacket’s psexec.py tool to exploit this misconfiguration and get an interactive shell is another alternative way to capture the flag on this system. However, using psexec.py is tad noisy in real environment.
 
-Impacket is a collection of python3 classes that provides access to network packets. On the other hand, PsExec is a portable tool from Microsoft used to maintain and connect to systems via SMB remotely. Therefore, I used psexec.py to authenticate as the ‘Administrator’ user in order to get an interactive shell.
 
 Syntax: sudo psexec.py username@{Target_IP}
 
@@ -90,10 +85,8 @@ Microsoft Windows [Version 10.0.17763.107]
 
 
 ![image](https://github.com/T6X3G/F.NS357_Machine-s/assets/110654108/2166f39a-593f-4dda-9bd9-a678288e097d)
-`Got a shell as user ‘nt authority system’ , which is the user with the highest privileges. I navigated to the same directory as earlier ( C:\Users\Administrator\Desktop) to retrieve the flag.`
-
-`Conclusion
-It is imperative to always make sure that your system and services are properly configured in order to prevent threat actors from penetrating through and exploiting it. In this case, changing default settings, permissions, and restricting access to certain shares that should not be accessible by anyone, are simple steps to perform in order to secure a service like SMB. Here is a useful resource from VK9 Security on how to harden and secure SMB.`
+`Got a shell as user ‘nt authority system’ 
+`
 
 
 
